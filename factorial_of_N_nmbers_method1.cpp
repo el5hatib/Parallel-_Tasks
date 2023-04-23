@@ -8,7 +8,7 @@ int main()
     long n;
     int nthreads;
 
-    cout << "Please enter the number of integers to fact: " << endl;
+    cout << "please enter N numbers to calculate factorial for it : " << endl;
     cin >> n;
 
     long fact[2] = { 1, 1 };
