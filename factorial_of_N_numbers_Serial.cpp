@@ -5,7 +5,7 @@ int main()
 {
 
 	long n;
-	cout << "please enter N numbers to sum it : " << endl;
+	cout << "please enter N numbers to calculate factorial for it : " << endl;
 	cin >> n;
 	long fact = 1;
 	double STime = omp_get_wtime();
