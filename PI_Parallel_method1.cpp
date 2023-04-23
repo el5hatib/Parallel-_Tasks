@@ -6,7 +6,7 @@ int main()
     int steps = 10000000000;
     double rate = 1.0 / steps;
     double pi = 0.0;
-    double sum[3] = {0,0,0};
+    double sum[3] = { 0,0,0 };
     float stime = omp_get_wtime();
 #pragma omp parallel num_threads(3)
     {
@@ -18,7 +18,7 @@ int main()
             sum[id] += (4.0 / (1.0 + x * x));
         }
     }
-    for (int i = 0; i < 2; i++)
+    for (int i = 0; i < 3; i++)
     {
         pi = pi + sum[i] * rate;
     }
