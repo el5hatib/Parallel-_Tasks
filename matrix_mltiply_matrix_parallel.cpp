@@ -13,6 +13,7 @@ int main()
 	int arr_a[3][2];
 	int arr_b[2][3];
 	int arr_c[3][3];
+	double start_time = omp_get_wtime();
 #pragma  omp parallel for collapse(2)
 	for (int i=0; i<rowA; i++)
 	{
@@ -29,7 +30,7 @@ int main()
 			arr_b[i][j] = rand();
 		}
 	}
-#pragma  omp parallel for
+#pragma  omp parallel for collapse(2)
 	for (int i = 0; i < rowA; i++)
 	{
 		for (int j = 0; j < colB; j++)
@@ -41,6 +42,7 @@ int main()
 			}
 		}
 	}
+	double end_time = omp_get_wtime();
 	cout << "Matrix Result" << endl;
 	cout << "=============" << endl;
 	for ( int i = 0; i < rowA; i++)
@@ -51,5 +53,7 @@ int main()
 		}
 		cout << endl;
 	}
+	cout << "=============" << endl;
+	cout << "Time: " << end_time - start_time << endl;
 	return 0; 
 }
