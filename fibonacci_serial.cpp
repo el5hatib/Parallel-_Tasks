@@ -9,7 +9,7 @@ int fibonacci(int n)
 {
 		int i, j;
 if (n<2)
-	return 1;
+	return n;
 else
 {
 	i = fibonacci(n-1);
