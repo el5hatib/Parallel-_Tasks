@@ -15,11 +15,11 @@ int main ()
 {
 	double start_time, end_time;
 	start_time = omp_get_wtime();
-	end_time = omp_get_wtime();
 	cout << "Enter a number: ";
 	int n;
 	cin >> n;
 	cout << "Factorial of " << n << " is " << factorial (n) << endl;
+	end_time = omp_get_wtime();
 	double time = end_time - start_time;
 	cout << "Time taken: " << time << " seconds" << endl;
 
