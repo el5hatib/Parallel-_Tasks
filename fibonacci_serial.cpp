@@ -3,7 +3,7 @@
 using namespace  std;
 /*
  * Fibonacci function that computes the n Fibonacci number serial code
- * 
+ * in videos there are an error in the code because we should return n not 1 in the if statement
  */
 int fibonacci(int n)
 {
